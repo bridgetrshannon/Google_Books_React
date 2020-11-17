@@ -12,11 +12,11 @@ function App() {
     <Router>
       <div>
         <Navbar />
-        {/* <Switch>
-          <Route exact path="/" component={Home} />
+        <Switch>
+          {/* <Route exact path="/" component={Home} />
           <Route exact path="/saved" component={Saved} />
-          <Route component={NoMatch} />
-        </Switch> */}
+          <Route component={NoMatch} /> */}
+        </Switch>
       </div>
     </Router>
   );

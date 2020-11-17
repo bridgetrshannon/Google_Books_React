@@ -24,30 +24,20 @@ function Navbar(props) {
             <ul class="navbar-nav ml-auto">
               <li
                 class={`nav-item  ${
-                  props.location.pathname === "/" ? "active" : ""
+                  props.location.pathname === "/search" ? "active" : ""
                 }`}
               >
-                <Link class="nav-link" to="/">
+                <Link class="nav-link" to="/search">
                   Search
-                  <span class="sr-only">(current)</span>
                 </Link>
               </li>
               <li
                 class={`nav-item  ${
-                  props.location.pathname === "/about" ? "active" : ""
+                  props.location.pathname === "/saved" ? "active" : ""
                 }`}
               >
-                <Link class="nav-link" to="/project">
+                <Link class="nav-link" to="/saved">
                   Saved
-                </Link>
-              </li>
-              <li
-                class={`nav-item  ${
-                  props.location.pathname === "/contact" ? "active" : ""
-                }`}
-              >
-                <Link class="nav-link" to="/contact">
-                  Contact
                 </Link>
               </li>
             </ul>
