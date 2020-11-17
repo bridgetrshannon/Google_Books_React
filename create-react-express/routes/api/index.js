@@ -1,7 +1,14 @@
-/api/books (get) - Should return all saved books as JSON.
+const path = require("path");
+const router = require("express").Router();
+const bookRoutes = require("./books");
+const googleRoutes = require("./google");
 
-/api/books (post) - Will be used to save a new book to the database.
+router.use("/books", bookRoutes);
 
-/api/books/:id (delete) - Will be used to delete a book from the database by Mongo _id.
+router.use("/google", googleRoutes);
 
-* (get) - Will load your single HTML page in client/build/index.html. Make sure you have this after all other routes are defined.
+router.use(function (req, res) {
+  res.sendFile(path.join(__dirname, "../../client/build.index.html"));
+});
+
+module.exports = router;
