@@ -1,5 +1,5 @@
 import React from "react";
-import { ListItem, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
 function Book({
   title,
@@ -12,7 +12,7 @@ function Book({
 }) {
   return (
     <div>
-      <ListItem>
+      <li>
         <Row>
           <Col>
             <h3>{title}</h3>
@@ -37,7 +37,7 @@ function Book({
             <p>{description}</p>
           </Col>
         </Row>
-      </ListItem>
+      </li>
     </div>
   );
 }
